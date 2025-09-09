@@ -73,7 +73,7 @@ namespace Rsa_Conv
                 }, rsa => rsa.ToXmlString(true));
             }
 
-            if (pem.StartsWith("-----BEGIN PUBLIC KEY-----"))
+            if (pem.StartsWith("-----BEGIN RSA PUBLIC KEY-----") || pem.StartsWith("-----BEGIN PUBLIC KEY-----"))
             {
                 return GetXmlRsaKey(pem, obj =>
                 {
